@@ -1,0 +1,27 @@
+name: 'Github contributions calendar writer'
+description: 'Write text on your github contributions calendar'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+inputs:
+  text:
+    description: 'The text to write'
+    required: true
+  actorName:
+    description: 'The name of the actor to use'
+    required: true
+  actorEmail:
+    description: 'The email of the actor to use'
+    required: true
+  font:
+    description: 'The font to use'
+    required: false # If not provided, the default font will be used
+  commit-count:
+    description: 'The number of commits to make per day'
+    required: false # If not provided, the default commit count (20) will be used
+  repository:
+    description: 'The repository to write to'
+    required: false # If not provided, the current repository where the action is running will be used
+  token:
+    description: 'The token to use to authenticate to the repository'
+    required: false # If not provided, the default token will be used

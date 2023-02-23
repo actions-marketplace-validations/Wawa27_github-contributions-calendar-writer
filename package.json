@@ -1,0 +1,38 @@
+{
+  "name": "github-contributions-calendar-writer",
+  "version": "1.0.0",
+  "description": "A simple tool to write a message in your GitHub contributions calendar",
+  "main": "dist/index.js",
+  "keywords": ["github", "contributions", "calendar", "action", "cli", "message", "write", "commit", "contribution", "contributions"],
+  "author": "Wawa#2003",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --loader tsx --test ./test/GithubCalendarWriter.spec.ts",
+    "start": "node --loader tsx ./src/cli.ts",
+    "build": "ncc build src/action.ts",
+    "prepare": "husky install",
+    "lint": "eslint . --ext .ts --fix"
+  },
+  "dependencies": {
+    "commander": "^10.0.0",
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.1.1",
+    "tsx": "^3.12.3",
+    "uuidv4": "^6.2.13",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vercel/ncc": "^0.36.1",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.4"
+  }
+}
