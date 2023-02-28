@@ -1,7 +1,7 @@
 import * as core from '@actions/core';
 import main from './main';
 
-const text = core.getInput('text');
+const text = core.getInput('text', { trimWhitespace: false });
 const font = core.getInput('font');
 const simulate = core.getInput('simulate') === 'true';
 const actorName = core.getInput('actorName');
